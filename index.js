@@ -67,7 +67,13 @@ socket.on('data', (data) => {
     let JSONresponse = JSON.parse(data.toString().replace(/'/g, '"'))
     console.log(JSONresponse)
     if (JSONresponse['msg']) {
-      spaceClient.emit('process:end', {'val': JSONresponse['msg']})
+      if (JSONresponse['msg'] === 'success') {
+        spaceClient.emit('process:end', {'val': JSONresponse['msg']})
+      } else {
+        spaceClient.emit('process:error', {'val': JSONresponse['msg']})
+      }
+    } else {
+      spaceClient.emit('process:error', {'val': JSONresponse})
     }
   } catch (err) {
     console.error(err)
