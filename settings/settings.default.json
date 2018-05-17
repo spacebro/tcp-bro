@@ -1,0 +1,25 @@
+{
+  "reconnect": {
+    "time": 1,
+    "maxRetry": 5
+  },
+  "messages":[{
+      "action": "pool"
+    }
+  ],
+  "service": {
+    "tcp-server":{
+      "port": 8888,
+      "host": "127.0.0.1"
+    },
+    "spacebro": {
+      "host": "spacebro.space",
+      "port": 3333,
+      "channelName": "armani-vending",
+      "client": {
+        "name": "armani-vending-00",
+        "description": "client app for joffemar controller"
+      }
+    }
+  }
+}

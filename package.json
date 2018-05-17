@@ -1,0 +1,19 @@
+{
+  "name": "tcp-bro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "gabrielstuff",
+  "license": "MIT",
+  "dependencies": {
+    "spacebro-client": "^0.4.6",
+    "standard-settings": "^1.1.15",
+    "vorpal": "^1.12.0"
+  }
+}

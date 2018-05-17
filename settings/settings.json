@@ -1,0 +1,12 @@
+{
+  "reconnect": {
+    "time": 1,
+    "maxRetry": 5
+  },
+  "service": {
+    "tcp-server":{
+      "port": 8888,
+      "host": "127.0.0.1"
+    }
+  }
+}
