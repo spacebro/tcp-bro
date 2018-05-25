@@ -68,11 +68,14 @@ socket.on('data', (data) => {
     console.log(JSONresponse)
     if (JSONresponse['msg']) {
       if (JSONresponse['msg'] === 'success') {
+        console.log('emit process:end')
         spaceClient.emit('process:end', {'val': JSONresponse['msg']})
       } else {
+        console.log('emit process:error')
         spaceClient.emit('process:error', {'val': JSONresponse['msg']})
       }
     } else {
+      console.log('emit process:error')
       spaceClient.emit('process:error', {'val': JSONresponse})
     }
   } catch (err) {
