@@ -84,7 +84,7 @@ socket.on('data', (data) => {
 
 spaceClient.on('dispense', (data) => {
   console.log('dispense', data)
-  socket.write(JSON.stringify({'dispense': data['location-id']}))
+  socket.write(JSON.stringify({'dispense': data}))
 })
 
 spaceClient.on('enable', (data) => {
