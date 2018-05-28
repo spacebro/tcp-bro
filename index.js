@@ -91,8 +91,13 @@ spaceClient.on('dispense', (data) => {
 })
 
 spaceClient.on('enable', (data) => {
-  console.log('dispense', data)
+  console.log('enable', data)
   socket.write(JSON.stringify({'action': 'enable'}))
+})
+
+spaceClient.on('inventory', (data) => {
+  console.log('inventory', data)
+  socket.write(JSON.stringify({'action': 'inventory'}))
 })
 
 reconnect()
